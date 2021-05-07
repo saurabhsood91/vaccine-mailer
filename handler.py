@@ -9,7 +9,7 @@ from util.vaccine import fetch_vaccine_appointments
 def validate_environment():
     email = os.environ.get('email')
     aws_region = os.environ.get('aws_region')
-    recipients = os.environ('recipients')
+    recipients = os.environ.get('recipients')
 
     return (email is not None) and (aws_region is not None) and (recipients is not None)
 

@@ -1,0 +1,20 @@
+# serverless.yaml
+
+
+service: vaccine-mailer
+
+plugins:
+  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    dockerizePip: true
+
+provider:
+  name: aws
+  runtime: python3.6
+  region: ap-south-1
+
+functions:
+  appointmentalert:
+    handler: handler.main

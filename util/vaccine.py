@@ -12,7 +12,8 @@ def fetch_vaccine_appointments():
     }
     try:
         headers = {
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36",
+            "content-type": "application/json",
         }
         response = requests.get(BASE_URL, data=params, headers=headers)
         print('Response from API', response)
